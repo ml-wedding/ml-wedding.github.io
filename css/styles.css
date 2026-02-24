@@ -11348,6 +11348,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 #mainNav.navbar-scrolled {
     margin: 5px;
     border-radius: 22px;
+    background: #8FA68Ebb;
 }
 
 #mainNav .nav-link,
