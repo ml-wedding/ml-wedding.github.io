@@ -42,7 +42,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 255, 200, 0;
+  --bs-primary-rgb: 200, 182, 226;          /* PRIMARY COLOR */ /* PRIMARY COLOR */ /* PRIMARY COLOR */ /* PRIMARY COLOR */
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -74,7 +74,7 @@
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
   --bs-link-color: #ffc800;
-  --bs-link-hover-color: #cca000;
+  --bs-link-hover-color: #C5A24A;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff4cc;
 }
@@ -3732,7 +3732,7 @@ textarea.form-control-lg {
   --bs-navbar-color: rgba(0, 0, 0, 0.55);
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
-  --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
+  --bs-navbar-active-color: rgba(50, 50, 0, 0.9);
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
@@ -11315,23 +11315,49 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 /* Frosted glass button */
-  .btn-frosted {
-    background: rgba(255, 255, 255, 0.2); /* semi-transparent */
-    backdrop-filter: blur(10px);           /* blur behind */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
-    color: white;                           /* text color */
-    padding: 15px 35px;                     /* size of button */
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 27px;                    /* rounded corners */
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease;
-  }
+.btn-frosted {
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+  backdrop-filter: blur(10px);           /* blur behind */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+  color: white;                           /* text color */
+  padding: 15px 35px;                     /* size of button */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 27px;                    /* rounded corners */
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
 
-  .btn-frosted:hover {
-    background: rgba(255, 255, 255, 0.35); /* slightly more opaque on hover */
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-    transform: translateY(-2px);
-  }
+.btn-frosted:hover {
+  background: rgba(255, 255, 255, 0.35); /* slightly more opaque on hover */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+#mainNav {
+    background: rgba(255, 255, 255, 0.2);  /* frosted glass */
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    transition: all 0.5s ease;
+}
+
+#mainNav.navbar-scrolled {
+    margin: 5px;
+    border-radius: 22px;
+}
+
+#mainNav .nav-link,
+#mainNav .navbar-brand {
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+#mainNav .navbar-brand:hover,
+#mainNav .nav-link:hover {
+    color: #C5A24A !important;
+    transition: all 0.3s ease;
+}
