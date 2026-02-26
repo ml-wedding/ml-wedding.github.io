@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', event => {
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
+
         if (!navbarCollapsible) {
             return;
         }
@@ -58,7 +59,6 @@ const header = document.querySelector('.masthead');
 const numParticles = 50;
 const particles = [];
 
-// simple ease-out function: cubic
 function easeOutCubic(t) {
     return 1 - Math.pow(1 - t, 3);
 }
@@ -71,14 +71,14 @@ function createParticles() {
         const particle = document.createElement('div');
         particle.classList.add('particle');
 
-        const size = Math.random() * 6 + 3;
+        const size = Math.random() * 6 + 3; // 3–9px
         particle.style.width = `${size}px`;
         particle.style.height = `${size}px`;
         particle.style.left = `${Math.random() * 100}%`;
         particle.style.bottom = '-20px';
 
         // glow
-        particle.style.background = 'yellow';
+        particle.style.background = '#FFD32C';
         particle.style.borderRadius = '50%';
         particle.style.boxShadow = '0 0 6px rgba(255,255,255,0.8), 0 0 12px rgba(200,200,255,0.6)';
         particle.style.position = 'absolute';
@@ -86,13 +86,24 @@ function createParticles() {
 
         particleContainer.appendChild(particle);
 
+        // horizontal sway properties
+        const swayAmplitude = Math.random() * 10 + 5; // 5–15px sway left/right
+        const swaySpeed = Math.random() * 0.02 + 0.01; // speed of sway
+
         // store data
+        const baseSpeed = 0.00015;
+        const heightFactor = headerHeight / 500;
+        const randomFactor = Math.random() * 0.5 + 0.75;
+
         particles.push({
             el: particle,
             startY: -20,
-            maxY: headerHeight, // disappear halfway
-            progress: Math.random(), // random initial progress 0–1
-            speed: (Math.random() * 0.005 + 0.002) // base speed multiplier
+            maxY: headerHeight,
+            progress: Math.random(),
+            speed: baseSpeed * heightFactor * randomFactor,
+            swayAmplitude,
+            swaySpeed,
+            swayOffset: Math.random() * Math.PI * 2 // random start angle
         });
     }
 }
@@ -100,20 +111,19 @@ function createParticles() {
 function animateParticles() {
     const headerHeight = header.offsetHeight;
     for (const p of particles) {
-        p.progress += p.speed / 15;
+        p.progress += p.speed;
+        p.swayOffset += p.swaySpeed;
 
-        if (p.progress > 1) {
-            p.progress = 0; // reset
-        }
+        if (p.progress > 1) p.progress = 0;
 
-        // apply ease-out to vertical position
         const easedProgress = easeOutCubic(p.progress);
         const y = p.startY + easedProgress * p.maxY;
-
-        // opacity fades out halfway
         const opacity = 1 - easedProgress;
 
-        p.el.style.transform = `translateY(-${y}px) scale(${1 - easedProgress * 0.5})`;
+        // horizontal sway using sine wave
+        const xOffset = Math.sin(p.swayOffset) * p.swayAmplitude;
+
+        p.el.style.transform = `translate(${xOffset}px, -${y}px) scale(${1 - easedProgress * 0.5})`;
         p.el.style.opacity = opacity;
     }
 
@@ -126,7 +136,12 @@ animateParticles();
 
 // Update on resize
 window.addEventListener('resize', () => {
+    const headerHeight = header.offsetHeight;
     particles.forEach(p => {
-        p.maxY = header.offsetHeight / 2;
+        p.maxY = headerHeight;
+        const baseSpeed = 0.0008;
+        const heightFactor = headerHeight / 500;
+        const randomFactor = Math.random() * 0.5 + 0.75;
+        p.speed = baseSpeed * heightFactor * randomFactor;
     });
 });
