@@ -11438,3 +11438,30 @@ span.paypal-stack:hover .static-icon {
 span.paypal-stack:hover .animated-icon {
   display: inline-block; /* show animated icon on hover */
 }
+
+.particles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* clicks pass through */
+}
+
+.particle {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+
+    /* GLOW EFFECT */
+    box-shadow: 0 0 8px rgba(255,255,255,0.8),
+                0 0 12px rgba(200,200,255,0.6);
+    filter: blur(1.5px); /* softens edges for glow */
+}
+
+.masthead {
+    position: relative;
+    overflow: hidden;
+}
