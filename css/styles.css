@@ -3821,7 +3821,7 @@ textarea.form-control-lg {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;
-  color: var(--bs-navbar-color);
+   color: black; /* var(--bs-navbar-color); */
   background-color: transparent;
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
@@ -10906,6 +10906,14 @@ p {
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #ffc800;
 }
+#mainNav.navbar-shrink a,
+#mainNav.navbar-shrink .navbar-toggler {
+    color: white !important;
+  }
+#mainNav.scrolled a,
+#mainNav.navbar-shrink .navbar-toggler {
+  color: white !important;
+}
 
 @media (min-width: 992px) {
   #mainNav {
@@ -10927,9 +10935,6 @@ p {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #212529;
-  }
-  #mainNav.navbar-shrink a {
-    color: white;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
