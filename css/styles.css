@@ -11459,6 +11459,8 @@ span.paypal-stack:hover .animated-icon {
     box-shadow: 0 0 8px rgba(255,255,255,0.8),
                 0 0 12px rgba(200,200,255,0.6);
     filter: blur(1.5px); /* softens edges for glow */
+
+    mix-blend-mode: screen;
 }
 
 .masthead {
