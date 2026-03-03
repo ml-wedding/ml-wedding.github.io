@@ -5,45 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Lydia & Matthew</title>
-        <!-- Favicon-->
+        <title>Lydia &amp; Matthew</title>
+        <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
+        <!-- Font Awesome icons (free version) -->
         <script src="https://use.fontawesome.com/releases/v7.2.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Script Google font -->
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Lavishly+Yours&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@100;300;400;700&family=Corinthia:wght@400;700&family=Lavishly+Yours&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Theme CSS -->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const nav = document.getElementById('mainNav');
-
-        const toggleNavbarMargin = () => {
-            if (window.scrollY > 0) {
-                nav.classList.add('navbar-scrolled');
-            } else {
-                nav.classList.remove('navbar-scrolled');
-            }
-        };
-
-        window.addEventListener('scroll', toggleNavbarMargin);
-        toggleNavbarMargin(); // initialize on page load
-    });
-    </script>
     <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="padding-top: 8px; padding-bottom: 8px" id="mainNav">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top" style="font-family: 'Tangerine', cursive; font-weight: 800; font-size: 24pt">L<span style="font-size: 16pt; vertical-align: 4px">&</span>M</a>
+                <a class="navbar-brand navbar-brand-script" href="#page-top">L<span class="navbar-brand-amp">&amp;</span>M</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
-                    <i class="fas fa-bars ms-1"></i>
+                    <i class="fas fa-bars ms-1" aria-hidden="true"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
@@ -59,15 +43,37 @@
         <!-- Masthead -->
         <header class="masthead">
             <div class="particles"></div>
-            <div class="container" style="margin-bottom: 80pt;">
-                <div class="masthead-heading" 
-                     style="font-family: 'Lavishly Yours', cursive; 
-                            font-weight: 400;
-                            margin-bottom: 10px; 
-                            text-shadow: 0 0 3px black; 
-                            color: #C8B6E2">Lydia & Matthew</div>
-                <div class="masthead-subheading" style="color: #C8B6E2">Est. 2027</div>
-                <a class="btn btn-primary btn-xl text-uppercase btn-frosted" href="#services">
+            <div class="container masthead-container">
+                <div class="masthead-heading masthead-title">Lydia &amp; Matthew</div>
+                <div class="masthead-subheading masthead-subtitle">Est. 2027</div>
+                <!-- Countdown timer (date set in scripts.js) -->
+                <div class="outer-boxed countdown-outer-box">
+                    <div class="boxed countdown-box">
+                        <div class="countdown-wrapper" id="countdown">
+                            <div class="countdown-unit">
+                                <div class="countdown-number" id="cd-days">--</div>
+                                <div class="countdown-label">Days</div>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-unit">
+                                <div class="countdown-number" id="cd-hours">--</div>
+                                <div class="countdown-label">Hours</div>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-unit">
+                                <div class="countdown-number" id="cd-mins">--</div>
+                                <div class="countdown-label">Minutes</div>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-unit">
+                                <div class="countdown-number" id="cd-secs">--</div>
+                                <div class="countdown-label">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="btn btn-primary btn-xl text-uppercase btn-frosted" href="#info">
                     Be our guest!
                     <svg class="btn-border" width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none">
                         <rect x="1" y="1" width="198" height="58" rx="27" ry="27" fill="none" stroke="#FFD700" stroke-width="2" stroke-dasharray="60 162" />
@@ -76,35 +82,35 @@
             </div>
         </header>
 
-        <!-- Services -->
-        <section class="page-section" id="services" style="background: #F3E6D8">
+        <!-- Quick Info -->
+        <section class="page-section section-cream" id="info">
             <div class="container">
-                <div class="text-center">
+                <div class="text-center reveal">
                     <h2 class="section-heading">With joyful hearts, we invite you to our wedding!</h2>
                     <p>We are hosting a semi-formal, beautiful wedding in our backyard. You can expect drinks, food, music, dancing and good times. It will be a glorious union.</p>
                     <br/>
                 </div>
                 <div class="row text-center">
-                    <div class="col-md-4">
+                    <div class="col-md-4 reveal reveal-delay-1">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary shadow-circle"></i>
-                            <i class="fas fa-calendar-days fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-circle fa-stack-2x text-primary shadow-circle" aria-hidden="true"></i>
+                            <i class="fas fa-calendar-days fa-stack-1x fa-inverse" aria-hidden="true"></i>
                         </span>
                         <h4 class="my-3">When</h4>
                         <p class="text-muted">TBD</p>
                     </div>
-                    <div class="col-md-4" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=15+Pleasant+Hill+Rd,+Newtown,+CT', '_blank')" style="cursor: pointer;">
+                    <div class="col-md-4 clickable reveal reveal-delay-2" onclick="window.open('https://www.google.com/maps/dir/?api=1&destination=15+Pleasant+Hill+Rd,+Newtown,+CT', '_blank')">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary shadow-circle"></i>
-                            <i class="fas fa-location-arrow fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-circle fa-stack-2x text-primary shadow-circle" aria-hidden="true"></i>
+                            <i class="fas fa-location-arrow fa-stack-1x fa-inverse" aria-hidden="true"></i>
                         </span>
                         <h4 class="my-3">Where</h4>
                         <p class="text-muted">Newtown, CT</p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 reveal reveal-delay-3">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary shadow-circle"></i>
-                            <i class="fas fa-heart fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-circle fa-stack-2x text-primary shadow-circle" aria-hidden="true"></i>
+                            <i class="fas fa-heart fa-stack-1x fa-inverse" aria-hidden="true"></i>
                         </span>
                         <h4 class="my-3">Why</h4>
                         <p class="text-muted">Because we're in love!</p>
@@ -114,22 +120,20 @@
         </section>
 
         <!-- FAQ -->
-        <section class="page-section" id="faq" style="background-color: #8FA68E; color: #F3E6D8">
+        <section class="page-section section-green" id="faq">
             <div class="container">
-                <div class="text-center">
+                <div class="text-center reveal">
                     <h2 class="section-heading"><div class="outer-boxed"><div class="boxed">Information</div></div></h2>
                     <h3 class="section-subheading">Answers to some common questions.</h3>
                 </div>
-                <div class="row" style="padding: 20px;">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
+                <div class="row faq-row">
+                    <div class="col-lg-4 col-sm-6 mb-4 reveal reveal-delay-1">
                         <div class="portfolio-item">
                             <div class="portfolio-caption">
                                 <div class="d-flex align-items-center gap-3">
-                                    <i class="fa-solid fa-champagne-glasses fa-2x"></i>
-
+                                    <i class="fa-solid fa-champagne-glasses fa-2x" aria-hidden="true"></i>
                                     <div>
-                                        <div class="portfolio-caption-heading services">Drinks</div>
+                                        <div class="portfolio-caption-heading info">Drinks</div>
                                         <div class="portfolio-caption-subheading">Open bar</div>
                                     </div>
                                 </div>
@@ -139,15 +143,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 2-->
+                    <div class="col-lg-4 col-sm-6 mb-4 reveal reveal-delay-2">
                         <div class="portfolio-item">
                             <div class="portfolio-caption">
                                 <div class="d-flex align-items-center gap-3">
-                                    <i class="fa-solid fa-utensils fa-2x"></i>
-
+                                    <i class="fa-solid fa-utensils fa-2x" aria-hidden="true"></i>
                                     <div>
-                                        <div class="portfolio-caption-heading services">Food</div>
+                                        <div class="portfolio-caption-heading info">Food</div>
                                         <div class="portfolio-caption-subheading">Plated dinner</div>
                                     </div>
                                 </div>
@@ -157,15 +159,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 3-->
+                    <div class="col-lg-4 col-sm-6 mb-4 reveal reveal-delay-3">
                         <div class="portfolio-item">
                             <div class="portfolio-caption">
                                 <div class="d-flex align-items-center gap-3">
-                                    <i class="fa-solid fa-house fa-2x"></i>
-
+                                    <i class="fa-solid fa-house fa-2x" aria-hidden="true"></i>
                                     <div>
-                                        <div class="portfolio-caption-heading services">Venue</div>
+                                        <div class="portfolio-caption-heading info">Venue</div>
                                         <div class="portfolio-caption-subheading">Our backyard</div>
                                     </div>
                                 </div>
@@ -175,15 +175,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 4-->
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0 reveal reveal-delay-1">
                         <div class="portfolio-item">
                             <div class="portfolio-caption">
                                 <div class="d-flex align-items-center gap-3">
-                                    <i class="fa-solid fa-user-tie fa-2x"></i>
-
+                                    <i class="fa-solid fa-user-tie fa-2x" aria-hidden="true"></i>
                                     <div>
-                                        <div class="portfolio-caption-heading services">Dresscode</div>
+                                        <div class="portfolio-caption-heading info">Dresscode</div>
                                         <div class="portfolio-caption-subheading">Formal</div>
                                     </div>
                                 </div>
@@ -193,15 +191,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Portfolio item 5-->
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0 reveal reveal-delay-2">
                         <div class="portfolio-item">
                             <div class="portfolio-caption">
                                 <div class="d-flex align-items-center gap-3">
-                                    <i class="fa-solid fa-children fa-2x"></i>
-
+                                    <i class="fa-solid fa-children fa-2x" aria-hidden="true"></i>
                                     <div>
-                                        <div class="portfolio-caption-heading services">Kids</div>
+                                        <div class="portfolio-caption-heading info">Kids</div>
                                         <div class="portfolio-caption-subheading">Welcome.</div>
                                     </div>
                                 </div>
@@ -211,15 +207,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- Portfolio item 6-->
+                    <div class="col-lg-4 col-sm-6 reveal reveal-delay-3">
                         <div class="portfolio-item">
                             <div class="portfolio-caption">
                                 <div class="d-flex align-items-center gap-3">
-                                    <i class="fa-solid fa-square-parking fa-2x"></i>
-
+                                    <i class="fa-solid fa-square-parking fa-2x" aria-hidden="true"></i>
                                     <div>
-                                        <div class="portfolio-caption-heading services">Parking</div>
+                                        <div class="portfolio-caption-heading info">Parking</div>
                                         <div class="portfolio-caption-subheading">Dodingtown Firehouse</div>
                                     </div>
                                 </div>
@@ -234,25 +228,25 @@
         </section>
 
         <!-- About -->
-        <section class="page-section" id="about" style="background: #F3E6D8">
+        <section class="page-section section-cream" id="about">
             <div class="container">
-                <div class="text-center">
+                <div class="text-center reveal">
                     <h2 class="section-heading">About</h2>
                     <h3 class="section-subheading text-muted">A glimpse into our timeline.</h3>
                 </div>
                 <ul class="timeline">
                     <li>
-                        <div class="timeline-image" style="background-color: #6E86A6;"><img class="rounded-circle img-fluid" alt="" /></div>
+                        <div class="timeline-image timeline-image-blue"></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>2023</h4>
                                 <h4 class="subheading">The Beginning</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">We sat across the table in a moment of seredipity, a curious bliss we both felt deeply.</p></div>
+                            <div class="timeline-body"><p class="text-muted">We sat across the table in a moment of serendipity, a curious bliss we both felt deeply.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.png" alt="Lydia and Matthew on their first trip" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>June 2024</h4>
@@ -262,7 +256,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.png" alt="Little moments together" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>2025</h4>
@@ -272,7 +266,7 @@
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.png" alt="The proposal" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>February 2026</h4>
@@ -282,7 +276,7 @@
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image" style="background-color: #6E86A6;">
+                        <div class="timeline-image timeline-image-blue">
                             <h4>
                                 Be Part
                                 <br />
@@ -297,23 +291,22 @@
         </section>
 
         <!-- Donate -->
-        <section class="page-section" id="donate" style="background-color: #8FA68E; color: #F3E6D8">
+        <section class="page-section section-green" id="donate">
             <div class="container">
-                <div class="text-center">
+                <div class="text-center reveal">
                     <h2 class="section-heading"><div class="outer-boxed"><div class="boxed">Registry</div></div></h2>
-                    <h3 class="section-subheading">In lieu of physical gifts, please consider donating money towards our first home. We are gracious to recieve anything at all, but we are very limited on space.</h3>
+                    <h3 class="section-subheading">In lieu of physical gifts, please consider donating money towards our first home. We are gracious to receive anything at all, but we are very limited on space.</h3>
                 </div>
                 <div class="row">
-                    <div class="col-lg">
-                        <div class="team-member" style="cursor: pointer;">
-                            <!--<img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />-->
+                    <div class="col-lg-12">
+                        <div class="team-member clickable">
                             <span class="fa-stack fa-4x" onclick="window.open('https://paypal.me/mlwedding27', '_blank')">
-                                <i class="fas fa-circle fa-stack-2x text-primary shadow-circle"></i>
-                                <i class="fa-brands fa-paypal fa-stack-1x fa-inverse fa-beat-fade"></i>
+                                <i class="fas fa-circle fa-stack-2x text-primary shadow-circle" aria-hidden="true"></i>
+                                <i class="fa-brands fa-paypal fa-stack-1x fa-inverse fa-beat-fade" aria-hidden="true"></i>
                             </span>
                             <span class="fa-stack fa-4x" onclick="window.open('https://www.venmo.com/u/ml-wedding', '_blank')">
-                                <i class="fas fa-circle fa-stack-2x text-primary shadow-circle"></i>
-                                <i class="fa-brands fa-venmo-v fa-stack-1x fa-inverse fa-beat-fade fa-sm"></i>
+                                <i class="fas fa-circle fa-stack-2x text-primary shadow-circle" aria-hidden="true"></i>
+                                <i class="fa-brands fa-venmo-v fa-stack-1x fa-inverse fa-beat-fade fa-sm" aria-hidden="true"></i>
                             </span>
                             <h4>Donate</h4>
                         </div>
@@ -325,87 +318,55 @@
             </div>
         </section>
 
-        <!-- Contact-->
+        <!-- Contact -->
         <section class="page-section" id="contact">
             <div class="container">
-                <div class="text-center">
+                <div class="text-center reveal">
                     <h2 class="section-heading">Contact Us</h2>
                     <h3 class="section-subheading text-muted">You got something to say?</h3>
                 </div>
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <div id="contactForm">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <!-- Name input-->
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" />
                             </div>
                             <div class="form-group">
-                                <!-- Email address input-->
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" />
                             </div>
                             <div class="form-group mb-md-0">
-                                <!-- Phone number input-->
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" />
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                <textarea class="form-control" id="message" placeholder="Your Message *"></textarea>
                             </div>
                         </div>
                     </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="button">Send Message</button>
                     </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
-                </form>
+                    <!-- Success message shown after valid submit -->
+                    <div class="form-success-msg" id="formSuccess">
+                        Thank you! We'll be in touch soon ♥
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Footer-->
-        <footer class="footer py-4" style="background-color: #212529; color: #fff;">
+        <!-- Footer -->
+        <footer class="footer py-4 footer-dark">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-12 text-middle">Made with <i class="fa-solid fa-heart"></i> | Matthew White 2026</div>
+                    <div class="col-lg-12 text-center">Made with <i class="fa-solid fa-heart" aria-hidden="true"></i> | Matthew White 2026</div>
                 </div>
             </div>
         </footer>
-        <!-- Bootstrap core JS-->
+
+        <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
+        <!-- Theme JS -->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
