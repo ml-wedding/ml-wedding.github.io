@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // ── Countdown Timer ───────────────────────────────────────────
     // UPDATE this to the real wedding date/time once confirmed!
-    const WEDDING_DATE = new Date('2027-06-19T16:00:00');
+    const WEDDING_DATE = new Date('2027-06-26T17:00:00');
 
     function updateCountdown() {
         const now = new Date();
