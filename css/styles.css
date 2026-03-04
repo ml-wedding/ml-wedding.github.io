@@ -38,16 +38,6 @@ p {
   font-weight: 700;
 }
 
-.btn-social {
-  height: 2.5rem;
-  width: 2.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border-radius: 100%;
-}
-
 #mainNav {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
@@ -55,7 +45,7 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0,0,0,0.15);
   transition: all 0.5s ease;
-  padding: 2px;
+  padding: 5px;
 }
 #mainNav .navbar-toggler {
   color: #FFDB80;
@@ -96,7 +86,7 @@ p {
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover,
 #mainNav .navbar-brand:hover {
-  color: #FFFF80  ;
+  color: #FFFF80;
   transition: all 0.3s ease;
 }
 
@@ -105,6 +95,12 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 22px;
   background: #A67C9Dbb;
+}
+@media (min-width: 992px) {
+  #mainNav.navbar-scrolled {
+    margin: 5px;
+    border-radius: 22px;
+  }
 }
 #mainNav.navbar-scrolled a,
 #mainNav.navbar-scrolled .navbar-toggler {
@@ -185,9 +181,9 @@ header.masthead .masthead-heading {
     margin-bottom: 2rem;
   }
   header.masthead .masthead-heading {
-    font-size: 4.5rem;
+    font-size: 4.25rem;
     font-weight: 700;
-    line-height: 4.5rem;
+    line-height: 4.25rem;
     margin-bottom: 2rem;
   }
 }
@@ -712,7 +708,6 @@ h2.section-heading {
 }
 .countdown-unit {
   text-align: center;
-  min-width: 65px;
 }
 .countdown-number {
   font-family: 'Tangerine', cursive;
@@ -770,4 +765,26 @@ h2.section-heading {
 
 .text-primary {
   color: #C8B6E2 !important;
+}
+#info {
+  position: relative;
+}
+
+.floral-separator {
+  position: absolute;
+  bottom: -10.25rem;              /* hard pinned */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30rem;           /* adjust size */
+  height: auto;
+  pointer-events: none;
+  z-index: 3;
+  transition: all 2s ease-out;
+}
+
+@media (min-width: 992px) {
+  .floral-separator {
+    bottom: -15.25rem;              /* hard pinned */
+    width: 45rem;           /* adjust size */
+  }
 }
