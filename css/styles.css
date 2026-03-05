@@ -683,7 +683,7 @@ h2.section-heading {
 /* ── Floral separator ───────────────────────────────── */
 .floral-separator {
   position: absolute;
-  bottom: -9.62rem;              /* hard pinned */
+  top: -9.32rem;              /* hard pinned */
   left: 50%;
   transform: translateX(-50%);
   width: 28rem;           /* adjust size */
@@ -694,7 +694,7 @@ h2.section-heading {
 }
 @media (min-width: 992px) {
   .floral-separator {
-    bottom: -15.5rem;              /* hard pinned */
+    top: -15rem;              /* hard pinned */
     width: 45rem;           /* adjust size */
   }
 }
