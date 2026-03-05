@@ -38,6 +38,7 @@ p {
   font-weight: 700;
 }
 
+/* ── Main navigation ────────────────────────────────── */
 #mainNav {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
@@ -135,6 +136,7 @@ p {
   }
 }
 
+/* ── Header ─────────────────────────────────────────── */
 header.masthead {
   padding-top: 8.5rem;
   padding-bottom: 6rem;
@@ -168,7 +170,6 @@ header.masthead .masthead-heading {
   text-shadow: 0 0 3px black; 
   letter-spacing: 0.03em;
 }
-
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 17rem;
@@ -187,7 +188,6 @@ header.masthead .masthead-heading {
     margin-bottom: 2rem;
   }
 }
-
 @media (min-width: 992px) {
   header.masthead .masthead-heading {
     font-size: 5.25rem;
@@ -195,93 +195,7 @@ header.masthead .masthead-heading {
   }
 }
 
-.shadow-circle {
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
-}
-#portfolio .portfolio-item {
-  max-width: 26rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-#portfolio .portfolio-item .portfolio-link {
-  position: relative;
-  display: block;
-  margin: 0 auto;
-}
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 200, 0, 0.9);
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity ease-in-out 0.25s;
-}
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
-  font-size: 1.25rem;
-  color: white;
-}
-#portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
-  opacity: 1;
-}
-#portfolio .portfolio-item .portfolio-caption {
-  padding: 1.5rem;
-  text-align: center;
-  background-color: #fff;
-}
-#portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
-  font-size: 1.5rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-  margin-bottom: 0;
-}
-#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
-  font-style: italic;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.portfolio-modal .modal-dialog {
-  margin: 1rem;
-  max-width: 100vw;
-}
-.portfolio-modal .modal-content {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  text-align: center;
-}
-.portfolio-modal .modal-content h2, .portfolio-modal .modal-content .h2 {
-  font-size: 3rem;
-  line-height: 3rem;
-}
-.portfolio-modal .modal-content p.item-intro {
-  font-style: italic;
-  margin-bottom: 2rem;
-  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-.portfolio-modal .modal-content p {
-  margin-bottom: 2rem;
-}
-.portfolio-modal .modal-content ul.list-inline {
-  margin-bottom: 2rem;
-}
-.portfolio-modal .modal-content img {
-  margin-bottom: 2rem;
-}
-.portfolio-modal .close-modal {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  width: 3rem;
-  height: 3rem;
-  cursor: pointer;
-  background-color: transparent;
-}
-.portfolio-modal .close-modal:hover {
-  opacity: 0.3;
-}
-
+/* ── About us timeline ──────────────────────────────── */
 .timeline {
   position: relative;
   padding: 0;
@@ -378,7 +292,6 @@ header.masthead .masthead-heading {
 .timeline .timeline-body > p {
   margin-bottom: 0;
 }
-
 @media (min-width: 768px) {
   .timeline:before {
     left: 50%;
@@ -450,6 +363,7 @@ header.masthead .masthead-heading {
     padding: 0 100px 20px 20px;
   }
 }
+
 .team-member {
   margin-bottom: 3rem;
   text-align: center;
@@ -464,16 +378,12 @@ header.masthead .masthead-heading {
   margin-bottom: 0;
 }
 
-.img-brand {
-  height: 2.75rem;
-}
-
+/* ── Contact us form ────────────────────────────────── */
 section#contact {
   position: relative;
   overflow: hidden;
   background-color: #212529;
 }
-
 section#contact::before {
   content: "";
   position: absolute;
@@ -485,7 +395,6 @@ section#contact::before {
   background: linear-gradient(to bottom, rgba(11, 13, 14, 0.5) 0%, rgba(11, 13, 14, 0) 5%);
   z-index: 1;
 }
-
 section#contact .section-heading {
   color: #fff;
 }
@@ -494,6 +403,7 @@ section#contact #contactForm .form-group {
 }
 section#contact #contactForm .form-group input,
 section#contact #contactForm .form-group textarea {
+  border-radius: 1rem;
   padding: 1.25rem;
 }
 section#contact #contactForm .form-group input.form-control {
@@ -549,7 +459,7 @@ section#contact #contactForm :-ms-input-placeholder {
   color: #e74c3c;
 }
 
-/* Frosted glass button */
+/* ── Header button ──────────────────────────────────── */
 .btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #ffc800;
@@ -677,7 +587,7 @@ h2.section-heading {
   overflow: hidden;
 }
 
-/* ── Scroll reveal animations ─────────────────────────── */
+/* ── Scroll reveal animations ───────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -691,7 +601,7 @@ h2.section-heading {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 
-/* ── Countdown timer ──────────────────────────────────── */
+/* ── Countdown timer ────────────────────────────────── */
 .countdown-outer-box {
   background-color: #8FA68Eaa;
   padding: 2px;
@@ -733,7 +643,7 @@ h2.section-heading {
   line-height: 1;
 }
 
-/* ── Form submit feedback ─────────────────────────────── */
+/* ── Form submit feedback ───────────────────────────── */
 .form-success-msg {
   display: none;
   text-align: center;
@@ -744,25 +654,25 @@ h2.section-heading {
   letter-spacing: 0.05em;
 }
 
-/* ── Misc ─────────────────────────────────────────────── */
+/* ── Misc ───────────────────────────────────────────── */
+.shadow-circle {
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+}
 .clickable {
   cursor: pointer;
 }
-
 .section-green .section-subheading {
   color: rgba(255,255,255,0.75);
 }
 
-/* ── Alternating row colors ───────────────────────────── */
+/* ── Alternating row colors ─────────────────────────── */
 #info, #about {
   background: #F3E6D8
 }
-
 #faq, #donate {
   background-color: #8FA68E; 
   color: #F3E6D8
 }
-
 .text-primary {
   color: #C8B6E2 !important;
 }
@@ -770,21 +680,38 @@ h2.section-heading {
   position: relative;
 }
 
+/* ── Floral separator ───────────────────────────────── */
 .floral-separator {
   position: absolute;
-  bottom: -10.25rem;              /* hard pinned */
+  bottom: -9.62rem;              /* hard pinned */
   left: 50%;
   transform: translateX(-50%);
-  width: 30rem;           /* adjust size */
+  width: 28rem;           /* adjust size */
   height: auto;
   pointer-events: none;
   z-index: 3;
   transition: all 2s ease-out;
 }
-
 @media (min-width: 992px) {
   .floral-separator {
-    bottom: -15.25rem;              /* hard pinned */
+    bottom: -15.5rem;              /* hard pinned */
     width: 45rem;           /* adjust size */
   }
+}
+
+/* ── Floral wreath ──────────────────────────────────── */
+.wreath-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.floral-wreath {
+    position: absolute;
+    width: 225px; /* adjust to taste */
+    height: auto;
+    pointer-events: none;
+    transform: translate(-3px, 6px);
 }
