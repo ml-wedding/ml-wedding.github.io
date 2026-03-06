@@ -8,6 +8,8 @@ body {
 
 p {
   line-height: 1.75;
+  font-family: 'Lora', serif;
+  font-style: italic;
 }
 
 .page-section {
@@ -67,7 +69,7 @@ p {
 }
 #mainNav a,
 #mainNav .navbar-toggler {
-  text-shadow: 0 0 3px #221122cc;
+  text-shadow: 0 0 2px #221122cc;
   transition: all 0.3s ease;
 }
 #mainNav .navbar-brand-amp {
@@ -607,6 +609,7 @@ h2.section-heading {
   padding: 2px;
 }
 .countdown-box {
+  border: 2px solid #FFDB80aa;
   padding: 2px;
 }
 .countdown-wrapper {
@@ -710,8 +713,23 @@ h2.section-heading {
 }
 .floral-wreath {
     position: absolute;
-    width: 225px; /* adjust to taste */
+    width: 230px; /* adjust to taste */
     height: auto;
     pointer-events: none;
-    transform: translate(-3px, 6px);
+    transform: translate(-3px, 5px);
+}
+
+.faq {
+  border: 1px solid #D8A1A9ee;
+  border-radius: 0.75rem;
+}
+
+.faq-header {
+  background-color: #D8A1A999;
+  border-radius: 0.75rem 0.75rem 0 0;
+  padding: 8px 20px;
+}
+
+.faq p {
+  padding: 8px 20px;
 }
